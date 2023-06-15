@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "939889013764",
+    "firebase_url": "https://deliveryapp-3b8a8-default-rtdb.firebaseio.com",
+    "project_id": "deliveryapp-3b8a8",
+    "storage_bucket": "deliveryapp-3b8a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:939889013764:android:332f21834f803aa7c77151",
+        "android_client_info": {
+          "package_name": "com.example.delivery_app_fominhas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "939889013764-qjb1b82dlo2llo7flbsd26co5i5aurgo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdKNZV8iugW8GHBRp0qm66w8RZyUKfdfI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "939889013764-qjb1b82dlo2llo7flbsd26co5i5aurgo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

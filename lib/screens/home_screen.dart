@@ -1,6 +1,6 @@
-import 'package:delivery_app_01/screens/profile_screen.dart';
-import 'package:delivery_app_01/screens/requests_screen.dart';
-import 'package:delivery_app_01/screens/stores_screen.dart';
+import 'package:delivery_app_fominhas/screens/profile_screen.dart';
+import 'package:delivery_app_fominhas/screens/requests_screen.dart';
+import 'package:delivery_app_fominhas/screens/stores_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {

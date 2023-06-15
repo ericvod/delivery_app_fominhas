@@ -1,4 +1,4 @@
-import 'package:delivery_app_01/components/button_comp.dart';
+import 'package:delivery_app_fominhas/widgets/custom_buttom.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -39,13 +39,13 @@ class RegistrationOption extends StatelessWidget {
                 height: 50,
                 width: double.infinity,
                 child:
-                    const ButtonComp(text: 'Usuário', route: 'user_register'),
+                    const CustomButtom(text: 'Usuário', route: 'user_register'),
               ),
               Container(
                 margin: const EdgeInsets.fromLTRB(10, 10, 10, 30),
                 height: 50,
                 width: double.infinity,
-                child: const ButtonComp(text: 'Loja', route: 'semrota'),
+                child: const CustomButtom(text: 'Loja', route: 'semrota'),
               ),
             ],
           ),

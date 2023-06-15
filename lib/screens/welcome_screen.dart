@@ -1,4 +1,4 @@
-import 'package:delivery_app_01/components/button_comp.dart';
+import 'package:delivery_app_fominhas/widgets/custom_buttom.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -44,14 +44,14 @@ class WelcomeScreen extends StatelessWidget {
                 margin: const EdgeInsets.fromLTRB(10, 10, 10, 10),
                 height: 50,
                 width: double.infinity,
-                child: const ButtonComp(
+                child: const CustomButtom(
                     text: 'Cadastre-se', route: 'registrationOption'),
               ),
               Container(
                 margin: const EdgeInsets.fromLTRB(10, 10, 10, 30),
                 height: 50,
                 width: double.infinity,
-                child: const ButtonComp(text: 'Entrar', route: 'login'),
+                child: const CustomButtom(text: 'Entrar', route: 'login'),
               ),
             ],
           ),

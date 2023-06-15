@@ -1,6 +1,6 @@
 {
-    "name": "delivery_app_01",
-    "short_name": "delivery_app_01",
+    "name": "delivery_app_fominhas",
+    "short_name": "delivery_app_fominhas",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

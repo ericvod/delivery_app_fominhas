@@ -38,6 +38,7 @@ class AuthService extends ChangeNotifier {
       } else if (e.code == 'email-already-in-use') {
         throw AuthException('Este email já está cadastrado');
       }
+      throw AuthException('Houve algum erro!');
     }
   }
 
@@ -51,6 +52,7 @@ class AuthService extends ChangeNotifier {
       } else if (e.code == 'wrong-password') {
         throw AuthException('Senha incorreta. Tente novamente');
       }
+      throw AuthException('Houve algum erro!');
     }
   }
 

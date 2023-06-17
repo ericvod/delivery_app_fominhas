@@ -45,7 +45,8 @@ class RegistrationOption extends StatelessWidget {
                 margin: const EdgeInsets.fromLTRB(10, 10, 10, 30),
                 height: 50,
                 width: double.infinity,
-                child: const CustomButtom(text: 'Loja', route: 'semrota'),
+                child:
+                    const CustomButtom(text: 'Loja', route: 'store_register'),
               ),
             ],
           ),

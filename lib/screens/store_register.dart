@@ -4,14 +4,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:provider/provider.dart';
 
-class UserRegister extends StatefulWidget {
-  const UserRegister({Key? key}) : super(key: key);
+class StoreRegister extends StatefulWidget {
+  const StoreRegister({Key? key}) : super(key: key);
 
   @override
-  State<UserRegister> createState() => _UserRegisterState();
+  State<StoreRegister> createState() => _StoreRegisterState();
 }
 
-class _UserRegisterState extends State<UserRegister> {
+class _StoreRegisterState extends State<StoreRegister> {
   late FirebaseFirestore db;
   late AuthService auth;
   final formKey = GlobalKey<FormState>();
@@ -40,16 +40,17 @@ class _UserRegisterState extends State<UserRegister> {
           .read<AuthService>()
           .registar(emailController.text, passwordController.text);
       await db
-          .collection('usuarios/${auth.usuario!.uid}/dados')
+          .collection('lojas/${auth.usuario!.uid}/dados')
           .doc(auth.usuario!.uid)
           .set({
-        'nome': nameController.text,
+        'nomeLoja': nameController.text,
         'telefone': phoneController.text,
         'endereco': addressController.text,
-        'tipoConta': 1
+        'tipoConta': 2
       });
       if (!mounted) return;
-      Navigator.pushNamedAndRemoveUntil(context, '/home', (route) => false);
+      Navigator.pushNamedAndRemoveUntil(
+          context, '/homeStore', (route) => false);
     } on AuthException catch (e) {
       setState(() => loading = false);
       ScaffoldMessenger.of(context)
@@ -74,7 +75,7 @@ class _UserRegisterState extends State<UserRegister> {
                   Container(
                     margin: const EdgeInsets.fromLTRB(0, 30, 0, 30),
                     child: Text(
-                      'Cadastro',
+                      'Cadastro de Loja',
                       style: GoogleFonts.alike(
                         textStyle: Theme.of(context).textTheme.displayMedium,
                         fontSize: 50,
@@ -94,7 +95,7 @@ class _UserRegisterState extends State<UserRegister> {
                       },
                       decoration: const InputDecoration(
                         prefixIcon: Icon(Icons.person),
-                        labelText: "Nome",
+                        labelText: "Nome da loja",
                         labelStyle: TextStyle(color: Colors.blueGrey),
                       ),
                     ),
@@ -212,7 +213,7 @@ class _UserRegisterState extends State<UserRegister> {
                               ),
                             )
                           : const Text(
-                              'Entrar',
+                              'Cadastrar',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 16,

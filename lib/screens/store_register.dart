@@ -38,7 +38,7 @@ class _StoreRegisterState extends State<StoreRegister> {
       setState(() => loading = true);
       await context
           .read<AuthService>()
-          .registar(emailController.text, passwordController.text);
+          .registrar(emailController.text, passwordController.text);
       await db
           .collection('lojas/${auth.usuario!.uid}/dados')
           .doc(auth.usuario!.uid)

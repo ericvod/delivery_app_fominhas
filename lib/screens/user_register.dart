@@ -38,7 +38,7 @@ class _UserRegisterState extends State<UserRegister> {
       setState(() => loading = true);
       await context
           .read<AuthService>()
-          .registar(emailController.text, passwordController.text);
+          .registrar(emailController.text, passwordController.text);
       await db
           .collection('usuarios/${auth.usuario!.uid}/dados')
           .doc(auth.usuario!.uid)
@@ -46,7 +46,7 @@ class _UserRegisterState extends State<UserRegister> {
         'nome': nameController.text,
         'telefone': phoneController.text,
         'endereco': addressController.text,
-        'tipoConta': 1
+        'tipoConta': 1,
       });
       if (!mounted) return;
       Navigator.pushNamedAndRemoveUntil(context, '/home', (route) => false);

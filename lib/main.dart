@@ -1,9 +1,9 @@
-import 'package:delivery_app_fominhas/screens/edit_profile_screen.dart';
-import 'package:delivery_app_fominhas/screens/home_screen.dart';
-import 'package:delivery_app_fominhas/screens/home_store_screen.dart';
+import 'package:delivery_app_fominhas/screens/user/edit_profile_screen.dart';
+import 'package:delivery_app_fominhas/screens/store/edit_profile_store_screen.dart';
+import 'package:delivery_app_fominhas/screens/user/home_screen.dart';
+import 'package:delivery_app_fominhas/screens/store/home_store_screen.dart';
 import 'package:delivery_app_fominhas/screens/login_screen.dart';
 import 'package:delivery_app_fominhas/screens/store_register.dart';
-import 'package:delivery_app_fominhas/screens/store_registration_screen.dart';
 import 'package:delivery_app_fominhas/screens/user_register.dart';
 import 'package:delivery_app_fominhas/screens/registration_option.dart';
 import 'package:delivery_app_fominhas/screens/welcome_screen.dart';
@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
         "/store_register": (context) => const StoreRegister(),
         "/registrationOption": (context) => const RegistrationOption(),
         "/editProfile": (context) => const EditProfilePage(),
-        "/storeRegistration": (context) => const StoreRegistrationScreen(),
+        "/editProfileStore": (context) => const EditProfileStorePage(),
       },
     );
   }

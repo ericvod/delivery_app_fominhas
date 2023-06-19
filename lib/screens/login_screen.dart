@@ -1,9 +1,10 @@
 import 'package:delivery_app_fominhas/services/auth_service.dart';
+import 'package:delivery_app_fominhas/widgets/auth_check.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -29,7 +30,12 @@ class _LoginScreenState extends State<LoginScreen> {
           .read<AuthService>()
           .login(emailController.text, passwordController.text);
       if (!mounted) return;
-      Navigator.pushNamedAndRemoveUntil(context, '/home', (route) => false);
+      Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context) => const AuthCheck()),
+        (route) => false,
+      );
+      const AuthCheck();
     } on AuthException catch (e) {
       setState(() => loading = false);
       ScaffoldMessenger.of(context)
